@@ -109,7 +109,7 @@ const TableAndModal = () => {
     <Box
       className="vidro"
       sx={{
-        mt: desktop ? 0 : 20,
+        mt: desktop ? 0 : 15,
         padding: 6,
         borderRadius: 6,
         flexDirection: "column",
@@ -117,7 +117,7 @@ const TableAndModal = () => {
         alignItems: "center",
         justifyContent: "center",
         width: "70%",
-        height: 500,
+        height: 550,
       }}
     >
       <input
