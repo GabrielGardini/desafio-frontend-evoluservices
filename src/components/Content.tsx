@@ -9,7 +9,7 @@ const Content = () => {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    mt: desktop ? 10 : 10,
+    mt: desktop ? 10 : 20,
   };
 
   return (
