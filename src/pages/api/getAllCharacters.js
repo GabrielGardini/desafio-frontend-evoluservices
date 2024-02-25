@@ -1,5 +1,3 @@
-import { request, gql } from "graphql-request";
-
 export async function getAllCharacters(page) {
   try {
     const data = await fetch(

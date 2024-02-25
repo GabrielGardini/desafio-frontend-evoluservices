@@ -1,26 +1,15 @@
-"use client";
-
-import * as React from "react";
-import { useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
+import { Slide, useMediaQuery, useScrollTrigger } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
+import IconButton from "@mui/material/IconButton";
+import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import {
-  Fab,
-  Modal,
-  Slide,
-  TextField,
-  useMediaQuery,
-  useScrollTrigger,
-} from "@mui/material";
-import { Settings } from "@mui/icons-material";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
 import Image from "next/image";
+import { useState } from "react";
 
 const pages = [
   { title: "Personagens" },
@@ -43,30 +32,25 @@ function HideOnScroll(props: any) {
 
 const Header = () => {
   //ESTILOS DO HEADER
-  const matches = useMediaQuery("(min-width:600px)");
-  const matches900 = useMediaQuery("(min-width:900px)");
+  const biggerThan900px = useMediaQuery("(min-width:900px)");
 
-  const logoText = {
-    fontFamily: "Poppins",
-    color: "#EFF1F6",
-    display: "block",
-    fontSize: 24,
-    textDecoration: "none",
-    margin: 30,
-  };
   const box1 = {
+    // css do menu hamburguer
     flexGrow: 1,
     display: { xs: "flex", md: "none" },
     justifyContent: "flex-end",
   };
   const box2 = {
+    // css do menu normal (desktop)
     flexGrow: 1,
     display: { xs: "none", md: "flex" },
     justifyContent: "flex-end",
   };
   const option = {
-    color: "#000000",
-    // color: "#EFF1F6",
+    // css das opções do menu desktop
+    color: "#EFF1F6",
+    textShadow:
+      "1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black",
     display: "block",
     fontSize: 24,
     textDecoration: "none",
@@ -75,13 +59,13 @@ const Header = () => {
     fontWeight: "bold",
   };
   const optionSmall = {
+    // css das opções do menu mobile
     textDecoration: "none",
     cursor: "pointer",
     color: "black",
   };
 
   const [anchorElNav, setAnchorElNav] = useState(null);
-  const [open, setOpen] = useState(false);
 
   const handleOpenNavMenu = (event: any) => {
     setAnchorElNav(event.currentTarget);
@@ -93,22 +77,16 @@ const Header = () => {
 
   return (
     <>
-      <HideOnScroll id={"sobre"}>
-        <AppBar
-          className="gradient"
-          sx={{ backgroundColor: "#BFDE42" }}
-          elevation={2}
-        >
+      <HideOnScroll>
+        <AppBar sx={{ backgroundColor: "#41B4C9" }} elevation={2}>
           <Container maxWidth="xl">
             <Toolbar disableGutters>
               <Image
-                onClick={() =>
-                  window[`scrollTo`]({ top: 0, behavior: `smooth` })
-                }
+                priority
                 src={"/logo.svg"}
-                width={matches900 ? 250 : 250}
-                height={matches900 ? 100 : 100}
-                alt={"logo"}
+                width={biggerThan900px ? 250 : 250}
+                height={biggerThan900px ? 100 : 100}
+                alt={"Rick and Morty Logo"}
               ></Image>
               <Box sx={box1}>
                 <IconButton

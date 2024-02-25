@@ -1,31 +1,36 @@
 import { Grid } from "@mui/material";
 import Image from "next/image";
-import React from "react";
 import TableAndModal from "./Table";
 
 const Content = () => {
+  const GridStyle = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  };
+
   return (
     <>
-      <Grid container>
-        <Grid item xs={4}>
+      <Grid container sx={GridStyle}>
+        <Grid sx={{ display: "flex", justifyContent: "right" }} item xs={4}>
           <Image
-            // className="teste"
+            className="ghost-animation-rick"
             src={"/rick.svg"}
             width={300}
             height={300}
-            alt={"portal"}
+            alt={"Rick Flutuando"}
           ></Image>
         </Grid>
-        <Grid item xs={4}>
+        <Grid sx={GridStyle} item xs={4}>
           <TableAndModal></TableAndModal>
         </Grid>
-        <Grid item xs={4}>
+        <Grid sx={{ display: "flex", justifyContent: "left" }} item xs={4}>
           <Image
-            // className="teste"
+            className="ghost-animation-morty"
             src={"/morty.svg"}
             width={300}
             height={300}
-            alt={"portal"}
+            alt={"Morty Flutuando"}
           ></Image>
         </Grid>
       </Grid>

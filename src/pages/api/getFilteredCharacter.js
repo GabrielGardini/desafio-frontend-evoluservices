@@ -1,9 +1,9 @@
 import { request, gql } from "graphql-request";
 
-export async function getFilteredCharacter(name) {
+export async function getFilteredCharacter(name, page) {
   const query = gql`
   query {
-    characters(filter: { name: "${name}" }) {
+    characters(page: ${page}, filter: { name: "${name}" }) {
       info {
         count
       }
