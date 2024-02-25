@@ -113,7 +113,7 @@ const TableAndModal = () => {
         alignItems: "center",
         justifyContent: "center",
         width: "70%",
-        height: "60vh",
+        height: 500,
       }}
     >
       <input
