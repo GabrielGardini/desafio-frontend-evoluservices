@@ -1,12 +1,15 @@
-import { Grid } from "@mui/material";
+import { Grid, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import TableAndModal from "./Table";
 
 const Content = () => {
+  const desktop = useMediaQuery("(min-width:900px)");
+
   const GridStyle = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    mt: desktop ? 10 : 10,
   };
 
   return (

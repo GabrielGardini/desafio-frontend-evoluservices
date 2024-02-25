@@ -113,7 +113,7 @@ const TableAndModal = () => {
         alignItems: "center",
         justifyContent: "center",
         width: "70%",
-        height: "55vh",
+        height: "60vh",
       }}
     >
       <input
@@ -127,7 +127,7 @@ const TableAndModal = () => {
       <Paper sx={{ width: "100%", overflow: "hidden", borderRadius: 2 }}>
         <TableContainer
           sx={{
-            maxHeight: 300,
+            maxHeight: 400,
           }}
         >
           <Table stickyHeader aria-label="sticky table">
