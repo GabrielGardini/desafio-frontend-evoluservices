@@ -127,7 +127,7 @@ const TableAndModal = () => {
       <Paper sx={{ width: "100%", overflow: "hidden", borderRadius: 2 }}>
         <TableContainer
           sx={{
-            maxHeight: 400,
+            maxHeight: 350,
           }}
         >
           <Table stickyHeader aria-label="sticky table">
@@ -183,8 +183,8 @@ const TableAndModal = () => {
                             ) : (
                               <img
                                 src={row?.image}
-                                width={80}
-                                height={80}
+                                width={70}
+                                height={70}
                                 alt="foto"
                               ></img>
                             )}
