@@ -106,7 +106,7 @@ const TableAndModal = () => {
     <Box
       className="vidro"
       sx={{
-        padding: 6,
+        paddingX: 6,
         borderRadius: 6,
         flexDirection: "column",
         display: "flex",
@@ -127,7 +127,7 @@ const TableAndModal = () => {
       <Paper sx={{ width: "100%", overflow: "hidden", borderRadius: 2 }}>
         <TableContainer
           sx={{
-            maxHeight: 350,
+            maxHeight: 300,
           }}
         >
           <Table stickyHeader aria-label="sticky table">
@@ -183,8 +183,8 @@ const TableAndModal = () => {
                             ) : (
                               <img
                                 src={row?.image}
-                                width={70}
-                                height={70}
+                                width={80}
+                                height={80}
                                 alt="foto"
                               ></img>
                             )}

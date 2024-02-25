@@ -1,4 +1,4 @@
-import { Grid, useMediaQuery } from "@mui/material";
+import { Grid } from "@mui/material";
 import Image from "next/image";
 import TableAndModal from "./Table";
 
