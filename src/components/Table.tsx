@@ -106,7 +106,7 @@ const TableAndModal = () => {
     <Box
       className="vidro"
       sx={{
-        paddingX: 6,
+        padding: 6,
         borderRadius: 6,
         flexDirection: "column",
         display: "flex",
