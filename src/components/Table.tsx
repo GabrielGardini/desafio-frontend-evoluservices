@@ -9,6 +9,7 @@ import {
   Divider,
   Grid,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
@@ -67,6 +68,8 @@ const TableAndModal = () => {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
 
+  const desktop = useMediaQuery("(min-width:900px)");
+
   const handleClose = () => {
     setOpen(false);
   };
@@ -106,6 +109,7 @@ const TableAndModal = () => {
     <Box
       className="vidro"
       sx={{
+        mt: desktop ? 0 : 20,
         padding: 6,
         borderRadius: 6,
         flexDirection: "column",
