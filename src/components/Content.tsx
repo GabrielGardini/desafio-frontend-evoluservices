@@ -1,12 +1,14 @@
-import { Grid } from "@mui/material";
+import { Grid, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import TableAndModal from "./Table";
 
 const Content = () => {
+  const desktop = useMediaQuery("(min-width:600px)");
   const GridStyle = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    mt: desktop ? 20 : 10,
   };
 
   return (
@@ -21,7 +23,7 @@ const Content = () => {
             alt={"Rick Flutuando"}
           ></Image>
         </Grid>
-        <Grid sx={GridStyle} item xs={4}>
+        <Grid sx={{ display: "flex", justifyContent: "center" }} item xs={4}>
           <TableAndModal></TableAndModal>
         </Grid>
         <Grid sx={{ display: "flex", justifyContent: "left" }} item xs={4}>
